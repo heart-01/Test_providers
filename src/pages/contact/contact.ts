@@ -25,8 +25,9 @@ export class ContactPage {
     //เรียกใช้ฟังชั่น loadAll ผลที่ได้จากการส่งค่ากลับมาจะอยู่ในตัวแปร Customer
   }
 
-  gotoCustomerDetail(){
-    this.navCtrl.push(CustomerDetailPage);
+  gotoCustomerDetail(id){
+    this.navCtrl.push(CustomerDetailPage,{code:id});
+    //เปิดหน้า CustomerDetail และ แนบ id ไปด้วย
   }
 
 
