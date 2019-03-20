@@ -9,12 +9,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ContactPage } from '../pages/contact/contact';
 import { CustomerProvider } from '../providers/customer/customer'; //1.link page
+import { CustomerDetailPage } from '../pages/customer-detail/customer-detail';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ContactPage //2.link page
+    ContactPage, //2.link page
+    CustomerDetailPage
   ],
   imports: [
     HttpClientModule, //2.provider
@@ -25,7 +27,8 @@ import { CustomerProvider } from '../providers/customer/customer'; //1.link page
   entryComponents: [
     MyApp,
     HomePage,
-    ContactPage //3.link page
+    ContactPage, //3.link page
+    CustomerDetailPage
   ],
   providers: [
     StatusBar,

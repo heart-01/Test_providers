@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { CustomerProvider } from '../../providers/customer/customer'; //นำเข้า ProviderCustomer
+import { CustomerDetailPage } from '../customer-detail/customer-detail';
 
 /**
  * Generated class for the ContactPage page.
@@ -22,6 +23,10 @@ export class ContactPage {
     //ดึงข้อมูล data จากหน้า CustomerProvider
     this.data.loadAll().then(result=>{this.Customer=result});
     //เรียกใช้ฟังชั่น loadAll ผลที่ได้จากการส่งค่ากลับมาจะอยู่ในตัวแปร Customer
+  }
+
+  gotoCustomerDetail(){
+    this.navCtrl.push(CustomerDetailPage);
   }
 
 
