@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CustomerProvider } from '../../providers/customer/customer'; //นำเข้า ProviderCustomer
 
 /**
  * Generated class for the ContactPage page.
@@ -15,11 +16,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  Customer:any=0; //สร้างตัวแปร Customer ชนิด any เท่ากับ 0; 
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public data:CustomerProvider) {
+    //ดึงข้อมูล data จากหน้า CustomerProvider
+    this.data.loadAll().then(result=>{this.Customer=result});
+    //เรียกใช้ฟังชั่น loadAll ผลที่ได้จากการส่งค่ากลับมาจะอยู่ในตัวแปร Customer
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactPage');
-  }
 
 }

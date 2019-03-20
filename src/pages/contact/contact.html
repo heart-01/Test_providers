@@ -11,5 +11,11 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    <ion-list-header>Contact</ion-list-header>
+    <ion-item *ngFor="let i of Customer">
+      <h2><img src="assets/imgs/{{i.image}}" width="30px;"> {{i.name}}</h2>
 
+    </ion-item>
+  </ion-list>
 </ion-content>

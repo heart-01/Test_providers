@@ -15,10 +15,10 @@ export class CustomerProvider {
   constructor(public http: HttpClient) {
     
     this.data=[ 
-      {id:1,name:"Siwat",image:"contact_profile1",detail:"Test Detail1"},
-      {id:3,name:"Tanapol",image:"contact_profile2",detail:"Test Detail3"},
-      {id:2,name:"Premrutai",image:"contact_profile3",detail:"Test Detail2"},
-      {id:4,name:"Yanisa",image:"contact_profile4",detail:"Test Detail4"}
+      {id:1,name:"Siwat",image:"contact_profile1.jpg",detail:"Test Detail1"},
+      {id:3,name:"Tanapol",image:"contact_profile2.jpg",detail:"Test Detail3"},
+      {id:2,name:"Premrutai",image:"contact_profile3.jpg",detail:"Test Detail2"},
+      {id:4,name:"Yanisa",image:"contact_profile4.png",detail:"Test Detail4"}
     ];
 
 
