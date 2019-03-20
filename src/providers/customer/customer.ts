@@ -9,9 +9,23 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class CustomerProvider {
+  
+  data : any; //สร้างตัวแปร data ชนิดข้อมูลแบบ any
 
   constructor(public http: HttpClient) {
-    console.log('Hello CustomerProvider Provider');
+    
+    this.data=[ 
+      {id:1,name:"Siwat",image:"contact_profile1",detail:"Test Detail1"},
+      {id:3,name:"Tanapol",image:"contact_profile2",detail:"Test Detail3"},
+      {id:2,name:"Premrutai",image:"contact_profile3",detail:"Test Detail2"},
+      {id:4,name:"Yanisa",image:"contact_profile4",detail:"Test Detail4"}
+    ];
+
+
+  }
+  
+  loadAll(){   
+    return Promise.resolve(this.data);  //ฟังชั่นการส่งค่าข้อมูลแบบ Promise
   }
 
 }
