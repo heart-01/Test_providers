@@ -28,4 +28,14 @@ export class CustomerProvider {
     return Promise.resolve(this.data);  //ฟังชั่นการส่งค่าข้อมูลแบบ Promise
   }
 
+  getByID(id){ //ฟังชั่นกรองข้อมูลจากรหัส id
+    for(var i=0;i<(this.data).length;.i++){ //รับค่า id และ loop เช็คค่าที่เข้ามาว่ามากี่ข้อมูล
+
+      if(this.data[i].code==id){
+        return Promise.resolve(this.data[i]); 
+      }//เปรียบเทียบว่า code ที่ส่งเข้ามานั้นเท่ากันกับ id ของข้อมูลหรือไม่ถ้าเท่ากันถึงจะส่งข้อมูลของ id กลับไป
+
+    }
+  }
+
 }
