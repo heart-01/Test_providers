@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      index
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div>
+    <p>Welcome To Test Program</p>
+  </div>
+  <ion-list>
+    <ion-item (click)="gotoContact()">
+        <ion-icon name="contact"></ion-icon> Contact >>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
