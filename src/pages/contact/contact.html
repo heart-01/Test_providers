@@ -13,7 +13,7 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header>Contact</ion-list-header>
-    <ion-item *ngFor="let i of Customer" (click)="gotoCustomerDetail()" >
+    <ion-item *ngFor="let i of Customer" (click)="gotoCustomerDetail(i.id)" > <!--เรียกใช้เมธอท และ แนบ id เข้าไปในพารามิเตอร์-->
       <h2><img src="assets/imgs/{{i.image}}" width="30px;"> {{i.name}}</h2>
 
     </ion-item>
